@@ -12,3 +12,60 @@ body {
 h1 {
 
 }
+
+h2{
+
+}
+
+header{}
+
+header p{}
+
+nav ul {
+
+}
+
+nav li{}
+
+nav a{}
+
+nav a:hover{}
+
+.skip a{}
+
+.skip a:focus{}
+
+a:focus{}
+
+footer{}
+
+.container{}
+
+.nav{}
+
+.text-block{}
+
+.about{}
+
+.about-image{}
+
+.values{}
+
+.values-image{}
+
+.projects{}
+
+.projects-image{}
+
+.work{}
+
+.work-image{}
+
+.contact{}
+
+.contact-image{}
+
+/* @media screen and (mid-width: 800px){} */
+
+/* @media screen and (mid-width: 1024px){} */
+
