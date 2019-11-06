@@ -6,7 +6,7 @@ body {
     background-color: white;
     font-size: 18px;
     margin: 0;
-    padding: 0;    
+    padding: 0; 
 }
 
 h1 {
@@ -24,18 +24,44 @@ h2{
     background-color:green;
 }
 
-
-nav ul {
-    list-style-type: None;
+.about-overlay h2 {
+    vertical-align: middle;
 }
 
-nav li{
-    display: inline-block;
+p{
+    text-align: center;
+    padding: 25px;
+    margin: 10px;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    padding: 15px;
+}
+
+.text-block{
+    justify-self: center;
+    align-self: center;
+    z-index: 100;
+}
+
+p {
+    text-align: center;
+    margin: 50px;
+    padding: 50px;
+}
+
+.para {
+    opacity: 0;
+}
+
+nav li{  
+    background-color: blue;
 }
 
 nav a{
-    color: black;
-    font-weight: bold;
+    color: rgb(32, 32, 104);
 }
 
 nav a:hover{
@@ -58,37 +84,38 @@ nav a:hover{
 .skip a:focus{
     /*'skip to content' link should be positioned at the top. */
     top:0;
+}           
+
+a:focus{    
+    border: 2px solid blue;
 }
 
-a:focus{
-    border: 3px solid blue;
-}
-
-footer{
+/* div:hover{
+     used for when a people hovers over something listed as a div in the index file 
     background-color: white;
-    color: black;
-    grid-column: 1 / -1;  /*starts footer at column one and spans the full page*/
-    grid-row: 8/ span 1; /*finish writing for grid-row */
-    padding-top: 30px;
-    text-align: center;
-}
-
-div:hover{
-    /* used for when a people hovers over something listed as a div in the index file */
-    background-color: white;
-}
+} */
 
 .container{
     display: grid;
-    grid-template-columns: 100px auto auto auto auto auto 100px;
+    grid-template-columns: 100px auto 100px auto auto auto auto 100px;
     grid-template-rows: 100px 500px auto auto auto auto auto 300px;
+    width: 100vw;
+    
+}
+
+.about-overlay {
+    position: relative;
     width: 100vw;
 }
 
 header{
+    grid-column: 1/-1;
+    grid-row: 2 / span 1;
     background-size: cover;
-    color: orange;
-    height: 300px;
+    color: purple;
+    text-align: center;
+    height: 100px;
+    
 }
 
 header p{
@@ -97,25 +124,11 @@ header p{
     text-align: center;
 }
 
-.overlay {
-    position: static;
-    height: 100%;
-    width: 100%;
-    opacity: 25%;
-
-}
 
 .nav{
     grid-row: 1 / span 1;
     grid-column: 1/-1;
-}
-
-.text-block{
-    justify-self: center;
-    align-self: center;
-    z-index: 100;
-    border: 10px solid black;
-    padding: 30px;
+    text-align: center;
 }
 
 .about{
@@ -126,6 +139,33 @@ header p{
 .about-image{
     grid-row: 3 / span 1;
     grid-column: 1/-1;
+}
+
+.overlay{
+    /* fix current function to fade out photo when hovered */
+    /* background-color: orange; */
+    transition: .5s ease;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 25%;
+}
+
+
+.about-overlay:hover .overlay{
+    opacity: 1;
+    background-color: orange;
+    grid-row: 3 / span 1;
+    grid-column: 1/-1;
+}
+
+.about-overlay:hover .overlay p{
+    opacity: 1;
 }
 
 .values{
@@ -166,6 +206,15 @@ header p{
 .contact-image{
     grid-row: 7 / span 1;
     grid-column: 1/-1;
+}
+
+footer{
+    background-color: white;
+    color: black;
+    grid-column: 1 / -1;  /*starts footer at column one and spans the full page*/
+    grid-row: 8/ span 1; /*finish writing for grid-row */
+    padding-top: 30px;
+    text-align: center;
 }
 
 /* @media screen and (mid-width: 800px){
