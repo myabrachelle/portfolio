@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
-
+/* color scheme for the webpage {color: should be background #E4C666 should be headers #247E6C should be links #A9C6DE 
+    could be for special content#EAF5FF;} */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: white;
+    background-color:white;
     font-size: 18px;
     font-family: Khula;
     margin: 0;
@@ -27,6 +28,7 @@ h2{
     font-family: Khula;
     margin: 25px;
     background-color:green;
+    grid-column: 1/-1;
 }
 
 
@@ -120,14 +122,10 @@ a:focus{
 
 .container{
     display: grid;
-    grid-template-columns: 100px auto 100px auto auto auto auto 100px;
+    grid-template-columns: 100px auto 50px;
     grid-template-rows: 100px 500px auto auto auto auto auto 300px;
     width: 100vw;
     
-}
-.parallex {
-    grid-column: 1/ -1;
-    grid-row: 3/ -2;
 }
 
 header{
@@ -180,12 +178,19 @@ header p{
     grid-column: 1/-1;
     color: black;
 }
-/* .about-text-block {
-    height: 1000px; 
-    background-color: grey; 
+#text {
+    grid-row: 3/4;
+    grid-column: 1/-1;
+    background-color: white; 
     font-size: 24px; 
-    padding: 20px;
-} */
+    height: 1000px; 
+    /* padding: 20px; */
+}
+
+.parallex {
+    grid-column: 1/ -1;
+    grid-row: 3/ -2;
+}
 
 .values{
     grid-row: 4 / span 1;
@@ -206,6 +211,22 @@ header p{
     grid-row: 5 / span 1;
     grid-column: 1/-1;
 }
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    justify-content: center;
+    min-height: 500px;
+}
+
+.project-gallery > img{
+    border: 10px #50C7C7 solid;
+    margin: 10px;
+    width: 300px;
+  }
 
 .work{
     grid-row: 6 / span 1;
