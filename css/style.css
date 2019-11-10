@@ -92,6 +92,12 @@ a:focus{
     border: 2px solid blue;
 }
 
+nav li a.on {
+    text-decoration:none;
+    color:purple;
+    /* background:url(../images/menu_a.jpg) no-repeat center top; */
+}
+
 .container{
     display: grid;
     grid-template-columns: 50px auto 50px;
@@ -320,10 +326,251 @@ header{
       width: 100%;
   }
 
+  /* contact page */
+  legend{
+    grid-row: 2/ span 1;
+    grid-column: 2/ span 1;
 
-/* @media screen and (mid-width: 800px){
-    background-color: green;
-} */
+  }
+
+@media screen and (mid-width: 800px){
+    /* background-color: green; */
+    .container{
+        display: grid;
+        grid-template-columns: 50px auto 50px;
+        grid-template-rows: 200px 300px auto auto auto auto auto auto auto auto auto auto 300px;
+        width: 100vw;
+        
+    }
+    
+    .nav{
+        grid-column: 2/ span 1;
+        grid-row: 1/ span 1;
+        text-align: center;
+    }
+    
+    /* start of animation text */ 
+    .hidden {
+        opacity: 0;
+    }
+    
+    .console-container {
+        font-family: Khula;
+        font-size: 4em;
+        text-align: center;
+        height: 200px;
+        width: 100%;
+        display: block;
+        position: absolute;
+        color:white; /* WILL NEED TO CHANGE TO REFLECT COLOR SCHEME ONCE FINISHED */
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin:auto;
+        grid-column: 2/ span 1;
+        grid-row: 2/ span 1;
+    }
+    .console-underscore {
+        display:inline-block;
+        position:relative;
+        top:-0.14em;
+        left:10px;
+    }
+    /* end of animation text */ 
+    
+    .about-image {
+        grid-column: 2/ span 1;
+        grid-row: 3/ span 1;
+    }
+    
+    .about.text-block {
+        grid-column: 2/ span 1;
+        grid-row: 4/ span 1;
+    }
+    .link{
+        font-size: 50px;
+    }
+    
+    .values-image {
+        grid-column: 2/ span 1;
+        grid-row: 5/ span 1;
+    }
+    
+    .values.text-block {
+        grid-column: 2/ span 1;
+        grid-row: 6/ span 1;
+    }
+    
+    .projects-image{
+        grid-column: 2/ span 1;
+        grid-row: 7/ span 1;
+    }
+    
+    .projects.text-block{
+        grid-column: 2/ span 1;
+        grid-row: 8/span 1;
+    }
+    
+    .work-image{
+        grid-column: 2/ span 1;
+        grid-row: 9/ span 1;
+    }
+    
+    .work.text-block{
+        grid-column: 2/ span 1;
+        grid-row: 10/ span 1;
+    }
+    
+    .contact-image{
+        grid-column: 2/ span 1;
+        grid-row: 11/ span 1;
+    }
+    
+    .contact.text-block{
+        grid-column: 2/ span 1;
+        grid-row: 12/ span 1;
+    }
+    
+    footer {
+        background-color: yellow;
+        color: white;
+        font-size: 12px;
+        grid-column: 2/ span 1;
+        grid-row: 13/ span 1;
+        text-align: center;
+    }
+    
+    footer .collection-footer img{
+        padding-left: 15px;
+        padding-right: 15px;
+        float: none;
+        width: 50%;
+        border-radius:50%;
+    }
+    
+    /* About Page styling */
+    
+    .container2{
+        display: grid;
+        grid-template-columns: 50px auto 50px;
+        grid-template-rows: 200px auto auto;
+        width: 100vw;
+        
+    }
+    
+    header{
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        grid-column: 2/ span 1;
+        grid-row: 2/ -2;
+    }
+    
+    .about.page.intro-text-block p{
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        padding: 0 25px;
+        font-size: 12px;
+        margin: 25px;
+    }
+    
+    .about.page.second-text-block p{
+        display: block;
+        background-color: grey;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px 25px;
+        font-size: 12px;
+        margin: 25px;
+    }
+    
+    .about.page.third-text-block p{
+        background-color: brown;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px 25px;
+        font-size: 12px;
+        margin: 25px;
+    }
+    
+    .about.page.fourth-text-block p{
+        background-color: beige;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px 25px;
+        font-size: 12px;
+        margin: 25px;
+    }
+    
+    .about.page.fifth-text-block p{
+        background-color: blue;
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px 25px;
+        font-size: 12px;
+        margin: 25px;
+    }
+    
+    /* Projects/ Work Pages */
+     
+    /* Gallery on Project Page */
+     .project-gallery{
+        display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        justify-content: center;
+        min-height: 500px;
+        grid-column: 2/ span 1;
+      }
+    
+      .project-gallery .michigan, .arduino_board, .camp_davis, .yaxunah{
+        box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        border: 10px #50C7C7 solid;
+        margin: 10px;
+        width: 300px;
+    }
+    
+      #photo2{
+        width: 90%;
+    }
+    
+    /* Gallery on Work Page */
+      .work-gallery{
+        display: -webkit-box;
+        display: flex;
+        flex-wrap: wrap;
+        -webkit-box-align: start;
+        align-items: flex-start;
+        -webkit-box-pack: center;
+        justify-content: center;
+        min-height: 500px;
+        grid-column: 2/ span 1;
+      }
+    
+      .work-gallery .lab, .yard, .housing, .abc_solutions, .design, .facilitation, .habitat, .climate_blue, .humanity_first{
+        box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        border: 10px #50C7C7 solid;
+        margin: 10px;
+        width: 300px;
+      }
+    
+      #photo {
+          width: 100%;
+      }
+    
+      /* contact page */
+      legend{
+        grid-row: 2/ span 1;
+        grid-column: 2/ span 1;
+    
+      }
+    
+}
 
 /* @media screen and (mid-width: 1024px){
     background-color: orange;
@@ -362,5 +609,8 @@ header{
     opacity: 1;
 }
 
+
+
+FOR REDUCED MOTION, NEED TO REMOVE ALL ANIMATION, SCROLLING AND TRANSITIONS
 } */
 
