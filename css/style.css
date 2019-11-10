@@ -100,8 +100,8 @@ nav li a.on {
 
 .container{
     display: grid;
-    grid-template-columns: 50px auto 50px;
-    grid-template-rows: 200px 300px auto auto auto auto auto auto auto auto auto auto 300px;
+    grid-template-columns: auto;
+    grid-template-rows: 200px 300px auto auto auto auto auto auto auto auto 300px;
     width: 100vw;
     
 }
@@ -127,7 +127,7 @@ nav li a.on {
     position: absolute;
     color:white; /* WILL NEED TO CHANGE TO REFLECT COLOR SCHEME ONCE FINISHED */
     top: 0;
-    bottom: 0;
+    bottom: 100px;
     left: 0;
     right: 0;
     margin:auto;
@@ -153,16 +153,6 @@ nav li a.on {
 }
 .link{
     font-size: 50px;
-}
-
-.values-image {
-    grid-column: 2/ span 1;
-    grid-row: 5/ span 1;
-}
-
-.values.text-block {
-    grid-column: 2/ span 1;
-    grid-row: 6/ span 1;
 }
 
 .projects-image{
@@ -229,6 +219,16 @@ header{
     grid-column: 2/ span 1;
     grid-row: 2/ -2;
 }
+
+/* Uncomment and delete below code once styling is finished! ERASE BEFORE TURNING IN!
+    .about.page.intro-text-block p, .about.page.second-text-block p, .about.page.third-text-block p, .about.page.fourth-text-block p, .about.page.fifth-text-block p{
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        padding: 0 25px;
+        font-size: 12px;
+        margin: 25px;
+    } */
 
 .about.page.intro-text-block p{
     background-color: white;
@@ -333,21 +333,34 @@ header{
 
   }
 
-@media screen and (mid-width: 800px){
+@media screen and (min-width: 765px){
     /* background-color: green; */
     .container{
         display: grid;
-        grid-template-columns: 50px auto 50px;
-        grid-template-rows: 200px 300px auto auto auto auto auto auto auto auto auto auto 300px;
+        justify-self: center;
+        align-self: center;
+        grid-template-columns: 50px 300px auto auto 50px;
+        grid-template-rows: auto 200px auto auto auto auto auto;
+        grid-gap: 10px;
         width: 100vw;
         
     }
+
+    #main{
+        grid-row: 2/ span 1;
+        grid-column: 2/ span 1;
+    }
     
     .nav{
-        grid-column: 2/ span 1;
+        grid-column: 1/ -2;
         grid-row: 1/ span 1;
         text-align: center;
     }
+
+    nav li{
+        padding-right: 20px;
+        display: inline-block;
+      }
     
     /* start of animation text */ 
     .hidden {
@@ -362,118 +375,149 @@ header{
         width: 100%;
         display: block;
         position: absolute;
-        color:white; /* WILL NEED TO CHANGE TO REFLECT COLOR SCHEME ONCE FINISHED */
-        top: 0;
+        color: black; /* WILL NEED TO CHANGE TO REFLECT COLOR SCHEME ONCE FINISHED */
+        top: -1000px;
         bottom: 0;
         left: 0;
         right: 0;
         margin:auto;
-        grid-column: 2/ span 1;
-        grid-row: 2/ span 1;
     }
+    
     .console-underscore {
-        display:inline-block;
-        position:relative;
-        top:-0.14em;
-        left:10px;
+        display: inline-block;
+        position: relative;
+        top: -0.14em;
+        left: 10px;
     }
     /* end of animation text */ 
     
+    .link{
+        font-size: 50px;
+    }
+
+    .text-block{
+        border: black 2px solid;
+        background-color: white;
+        padding: 10px;
+        justify-self: none;
+    }
+
     .about-image {
-        grid-column: 2/ span 1;
+        grid-column: 3/ span 2;
         grid-row: 3/ span 1;
     }
     
     .about.text-block {
-        grid-column: 2/ span 1;
-        grid-row: 4/ span 1;
-    }
-    .link{
-        font-size: 50px;
-    }
-    
-    .values-image {
-        grid-column: 2/ span 1;
-        grid-row: 5/ span 1;
-    }
-    
-    .values.text-block {
-        grid-column: 2/ span 1;
-        grid-row: 6/ span 1;
+        grid-column: 2/ span 2;        
+        grid-row: 3/ span 1;
     }
     
     .projects-image{
-        grid-column: 2/ span 1;
-        grid-row: 7/ span 1;
+        grid-column: 2/ span 2;   
+        grid-row: 4/ span 1;
     }
     
     .projects.text-block{
-        grid-column: 2/ span 1;
-        grid-row: 8/span 1;
+        grid-column: 3/ span 2;   
+        grid-row: 4/span 1;
     }
     
     .work-image{
-        grid-column: 2/ span 1;
-        grid-row: 9/ span 1;
+        grid-column: 3/ span 2;   
+        grid-row: 5/ span 1;
     }
     
     .work.text-block{
-        grid-column: 2/ span 1;
-        grid-row: 10/ span 1;
+        grid-column: 2/ span 2;   
+        grid-row: 5/ span 1;
     }
     
     .contact-image{
-        grid-column: 2/ span 1;
-        grid-row: 11/ span 1;
+        grid-column: 2/ span 2;   
+        grid-row: 6/ span 1;
     }
     
     .contact.text-block{
-        grid-column: 2/ span 1;
-        grid-row: 12/ span 1;
+        grid-column: 3/ span 2;   
+        grid-row: 6/ span 1;
     }
     
     footer {
         background-color: yellow;
         color: white;
         font-size: 12px;
-        grid-column: 2/ span 1;
-        grid-row: 13/ span 1;
-        text-align: center;
+        grid-column: 1/ -1;   
+        grid-row: 7/ span 1;
+        text-align: left;
+        font-size: 24px;
+        min-height: 200px;
     }
     
     footer .collection-footer img{
-        padding-left: 15px;
-        padding-right: 15px;
-        float: none;
-        width: 50%;
-        border-radius:50%;
+        padding-top: 8px;
+        padding-bottom: 40px;
+        margin-right: 20px;
+        float: left;
+        width: 102px;
+        border-radius:45%;
     }
+
+    footer p, h3{
+        text-align: left;
+        
+    }
+
+    footer h3{
+        padding-top: 50px;
+    }
+
+    footer p{
+        padding-top: 0px;
+        font-size: 16px;
+    }
+
+    footer h4{
+        text-align: right;
+        margin-top: -100px;
+        margin-right: 20px;
+    }
+
     
     /* About Page styling */
     
     .container2{
         display: grid;
-        grid-template-columns: 50px auto 50px;
-        grid-template-rows: 200px auto auto;
+        justify-self: center;
+        align-self: center;
+        grid-template-columns: 50px 900px 50px;
+        grid-template-rows: auto auto auto auto auto auto;
         width: 100vw;
         
     }
-    
-    header{
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-        grid-column: 2/ span 1;
-        grid-row: 2/ -2;
+
+    h2{
+        text-align: center;
     }
+/* Uncomment and delete below code once styling is finished! ERASE BEFORE TURNING IN!
+    .about.page.intro-text-block p, .about.page.second-text-block p, .about.page.third-text-block p, .about.page.fourth-text-block p, .about.page.fifth-text-block p{
+        background-color: white;
+        border: 1px solid black;
+        text-align: center;
+        padding: 0 25px;
+        font-size: 20px;
+        justify-self: center;
+        align-self: center;
+        margin: 25px;
+    } */
+
     
     .about.page.intro-text-block p{
         background-color: white;
         border: 1px solid black;
         text-align: center;
         padding: 0 25px;
-        font-size: 12px;
-        margin: 25px;
+        font-size: 20px;
+        margin: 25px 0 0 200px;
     }
     
     .about.page.second-text-block p{
@@ -482,8 +526,8 @@ header{
         border: 1px solid black;
         text-align: center;
         padding: 10px 25px;
-        font-size: 12px;
-        margin: 25px;
+        font-size: 20px;
+        margin: 50px 200px 50px 0;
     }
     
     .about.page.third-text-block p{
@@ -491,8 +535,8 @@ header{
         border: 1px solid black;
         text-align: center;
         padding: 10px 25px;
-        font-size: 12px;
-        margin: 25px;
+        font-size: 20px;
+        margin: 25px 0 0 200px; /*change if more content is added- DELETE COMMENT BEFORE TURNINING IN */
     }
     
     .about.page.fourth-text-block p{
@@ -500,8 +544,8 @@ header{
         border: 1px solid black;
         text-align: center;
         padding: 10px 25px;
-        font-size: 12px;
-        margin: 25px;
+        font-size: 20px;
+        margin: 50px 200px 50px 0;
     }
     
     .about.page.fifth-text-block p{
@@ -509,8 +553,8 @@ header{
         border: 1px solid black;
         text-align: center;
         padding: 10px 25px;
-        font-size: 12px;
-        margin: 25px;
+        font-size: 20px;
+        margin: 25px 0 0 200px;
     }
     
     /* Projects/ Work Pages */
@@ -572,8 +616,8 @@ header{
     
 }
 
-/* @media screen and (mid-width: 1024px){
-    background-color: orange;
+@media screen and (mid-width: 1024px){
+    /* background-color: orange; */
 
 .para {
     opacity: 0;
@@ -609,8 +653,29 @@ header{
     opacity: 1;
 }
 
+@media screen and (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto; 
+        animation: none;
+    }
+  
+    .skip a{
+      background: white;
+      left: 0;
+      padding: 6px;
+      position: absolute;
+      top: -40px;
+      -webkit-transition: initial;
+      transition: initial;
+      z-index: 1;
+    }
+  
+    .skip a:focus{
+      top:0;
+    }
+  }
 
 
-FOR REDUCED MOTION, NEED TO REMOVE ALL ANIMATION, SCROLLING AND TRANSITIONS
+/* FOR REDUCED MOTION, NEED TO REMOVE ALL ANIMATION, SCROLLING AND TRANSITIONS
 } */
 
