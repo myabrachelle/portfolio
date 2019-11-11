@@ -9,26 +9,26 @@
     </head>
     <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="container2">
     <div class="nav">
+        <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a class="current" href="projects.html">PROJECTS</a></li>
                 <li><a href="work.html">WORK</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </div>
         <header id="main">
-                <h1>Gallery of my Previous Projects</h1>
+                <h1>My Previous Projects</h1>
         
             <a name="project-gallery"></a>
             <div class= "project-gallery">
                     <div class="michigan">
-                    <img id= "photo" src="images/michigan.jpg" alt="decoration">
-                        <h3><b>UX Public Field Research</b></h3>
+                            <img id= "photo" src="images/michigan.jpg" alt="decoration">
+                                <h3><b>UX Public Field Research</b></h3>
                     </div>
 
                     <div class="camp_davis">
@@ -48,7 +48,8 @@
                         <h3><b>Study Abroad Volunteer Work Focused on Conservation within Tourism</b></h3>
                     </div>
             </div>
-    
+            </header>
+                
             <footer>
                     <div class="collection-footer">
                         <img src="images/contactme2.png" alt="Photo of Mya"/>
@@ -58,9 +59,20 @@
                         https://www.linkedin.com/in/myagibson/</p>
             
                         <h4> Contact me about future projects below </h4>
+                    </br>
+                    <form action="https://formspree.io/mqkzrdpo" method="POST">
+                      <fieldset>
+                          <div id="emailField">
+                              <label>
+                                Email Address:  
+                                <input type="email" placeholder="youremail@email.com" name="_replyto">
+                              </label>
+                          </div>
+        
+                          <input type="submit" value="Send">
+        
+                      </fieldset>
             </footer>
-            </header>
-        </div>
         </body>
         </html>
     

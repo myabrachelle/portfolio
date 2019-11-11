@@ -6,68 +6,64 @@ html {
 }
 
 body {
-    background-color:white;
+    background-color: #ececec;
     font-size: 18px;
-    font-family: Khula;
+    font-family: Khula, 'Times New Roman', sans-serif;
     margin: 0;
     padding: 0; 
 }
 
 h1 {
-    background-color:blue;
     font-size: 50px;
-    font-family: Khula;
+    font-family: Khula,'Times New Roman', sans-serif;
     margin: 50px;
     line-height: 1;
     text-align: center;
+    color: #247E6C;
+    /* background-color: white; */
 }
 
 h2{
-    /* text-align: left; */
     font-size: 30px;
-    font-family: Khula;
+    font-family: Khula,'Times New Roman', sans-serif;
     margin: 25px;
     background-color:green;
-    /* grid-column: 1/-1; */
 }
 
 
 p{
-    text-align: right;
+    text-align: center;
     padding: 25px;
     margin: 10px;
-    color: orange;
+    color: #0c084c;
 }
 
 a{
     text-decoration: none;
     padding: 15px;
-
 }
 
-.text-block{
-    justify-self: center;
-    align-self: center;
-    z-index: 100;
-}
 
 nav ul{
     list-style-type: none;
 }
 
-nav li{  
-    background-color: blue;
-    /* display: inline-block; */
+nav li{
     padding-bottom: 10px;
     padding-top: 4px;
 }
 
 nav a{
-    color: rgb(32, 32, 104);
+    /* color of the list links in nav bar */
+    color: rgb(17, 85, 82);
 }
 
 nav a:hover{
     text-decoration: underline;
+}
+
+nav .current{
+    color: purple;
 }
 
 .skip a{
@@ -89,27 +85,28 @@ nav a:hover{
 }           
 
 a:focus{    
-    border: 2px solid blue;
+    border: 2px solid purple;
 }
 
-nav li a.on {
-    text-decoration:none;
-    color:purple;
-    /* background:url(../images/menu_a.jpg) no-repeat center top; */
-}
 
 .container{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 200px 300px auto auto auto auto auto auto auto auto 300px;
+    grid-template-rows: 225px 300px auto auto auto auto auto auto auto auto 300px;
     width: 100vw;
-    
 }
 
 .nav{
     grid-column: 2/ span 1;
     grid-row: 1/ span 1;
     text-align: center;
+    background-color: white;
+}
+
+/* puts logo at top of page */
+#logo{
+    float: initial;
+    width: 50px;
 }
 
 /* start of animation text */ 
@@ -125,20 +122,18 @@ nav li a.on {
     width: 100%;
     display: block;
     position: absolute;
-    color:white; /* WILL NEED TO CHANGE TO REFLECT COLOR SCHEME ONCE FINISHED */
+    color:black; 
     top: 0;
-    bottom: 100px;
+    bottom: -75px;
     left: 0;
     right: 0;
-    margin:auto;
-    grid-column: 2/ span 1;
-    grid-row: 2/ span 1;
+    margin: auto;
 }
 .console-underscore {
-    display:inline-block;
-    position:relative;
-    top:-0.14em;
-    left:10px;
+    display: inline-block;
+    position: relative;
+    top: -0.14em;
+    left: 10px;
 }
 /* end of animation text */ 
 
@@ -151,8 +146,13 @@ nav li a.on {
     grid-column: 2/ span 1;
     grid-row: 4/ span 1;
 }
-.link{
-    font-size: 50px;
+
+.about.text-block #about, .projects.text-block #projects, .work.text-block #work, .contact.text-block #contact{
+    font-size: 50px; 
+    color: #3a0088;
+    text-align: center;
+    display: inline-block;
+    padding-left: 20px;
 }
 
 .projects-image{
@@ -186,31 +186,30 @@ nav li a.on {
 }
 
 footer {
-    background-color: yellow;
-    color: white;
-    font-size: 12px;
+    background-color: white;
+    color: #0c084c;
+    font-size: 16px;
     grid-column: 2/ span 1;
     grid-row: 13/ span 1;
     text-align: center;
+
 }
 
 footer .collection-footer img{
     padding-left: 15px;
     padding-right: 15px;
+    padding-top: 20px;
     float: none;
-    width: 50%;
-    border-radius:50%;
+    width: 102px;
+    border-radius:60%;
+}
+
+footer a{
+    color: #3a0088;
 }
 
 /* About Page styling */
 
-.container2{
-    display: grid;
-    grid-template-columns: 50px auto 50px;
-    grid-template-rows: 200px auto auto;
-    width: 100vw;
-    
-}
 
 header{
     background-attachment: fixed;
@@ -220,65 +219,30 @@ header{
     grid-row: 2/ -2;
 }
 
-/* Uncomment and delete below code once styling is finished! ERASE BEFORE TURNING IN!
-    .about.page.intro-text-block p, .about.page.second-text-block p, .about.page.third-text-block p, .about.page.fourth-text-block p, .about.page.fifth-text-block p{
-        background-color: white;
-        border: 1px solid black;
-        text-align: center;
-        padding: 0 25px;
-        font-size: 12px;
-        margin: 25px;
-    } */
+.parallax h1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 0;
+    padding: 10px 0;
+}
 
-.about.page.intro-text-block p{
-    background-color: white;
-    border: 1px solid black;
+.about.page.intro-text-block p, .about.page.second-text-block p, .about.page.third-text-block p, 
+.about.page.fourth-text-block p, .about.page.fifth-text-block p{
     text-align: center;
     padding: 0 25px;
-    font-size: 12px;
+    font-size: 16px;
     margin: 25px;
-}
-
-.about.page.second-text-block p{
-    display: block;
-    background-color: grey;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px 25px;
-    font-size: 12px;
-    margin: 25px;
-}
-
-.about.page.third-text-block p{
-    background-color: brown;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px 25px;
-    font-size: 12px;
-    margin: 25px;
-}
-
-.about.page.fourth-text-block p{
-    background-color: beige;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px 25px;
-    font-size: 12px;
-    margin: 25px;
-}
-
-.about.page.fifth-text-block p{
-    background-color: blue;
-    border: 1px solid black;
-    text-align: center;
-    padding: 10px 25px;
-    font-size: 12px;
-    margin: 25px;
+    /* color: #096386; */
 }
 
 /* Projects/ Work Pages */
  
 /* Gallery on Project Page */
+
  .project-gallery{
     display: -webkit-box;
     display: flex;
@@ -293,9 +257,12 @@ header{
 
   .project-gallery .michigan, .arduino_board, .camp_davis, .yaxunah{
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    border: 10px #50C7C7 solid;
-    margin: 10px;
+    margin: 20px;
     width: 300px;
+}
+
+.project-gallery .michigan h3, .arduino_board h3, .camp_davis h3, .yaxunah h3{
+    margin: 15px;
 }
 
   #photo2{
@@ -317,9 +284,13 @@ header{
 
   .work-gallery .lab, .yard, .housing, .abc_solutions, .design, .facilitation, .habitat, .climate_blue, .humanity_first{
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-    border: 10px #50C7C7 solid;
     margin: 10px;
     width: 300px;
+  }
+
+  .work-gallery .lab h3, .yard h3, .housing h3, .abc_solutions h3, .design h3, 
+  .facilitation h3, .habitat h3, .climate_blue h3, .humanity_first h3{
+      margin: 15px;
   }
 
   #photo {
@@ -330,29 +301,35 @@ header{
   legend{
     grid-row: 2/ span 1;
     grid-column: 2/ span 1;
+    margin: 15px 30px;
+  }
 
+  label{
+      margin: 30px;
+  }
+
+  input {
+      margin: 0 30px;
   }
 
 @media screen and (min-width: 765px){
-    /* background-color: green; */
     .container{
         display: grid;
         justify-self: center;
         align-self: center;
-        grid-template-columns: 50px 300px auto auto 50px;
-        grid-template-rows: auto 200px auto auto auto auto auto;
-        grid-gap: 10px;
+        grid-template-columns: 50px 1fr 1fr 1fr 50px;
+        grid-template-rows: auto 250px auto auto auto auto 200px;
+        grid-gap: 0;
         width: 100vw;
-        
     }
 
     #main{
         grid-row: 2/ span 1;
-        grid-column: 2/ span 1;
+        grid-column: 1/ -1;
     }
     
     .nav{
-        grid-column: 1/ -2;
+        grid-column: 1/ -1;
         grid-row: 1/ span 1;
         text-align: center;
     }
@@ -363,44 +340,26 @@ header{
       }
     
     /* start of animation text */ 
-    .hidden {
-        opacity: 0;
-    }
-    
     .console-container {
-        font-family: Khula;
-        font-size: 4em;
-        text-align: center;
-        height: 200px;
-        width: 100%;
-        display: block;
-        position: absolute;
-        color: black; /* WILL NEED TO CHANGE TO REFLECT COLOR SCHEME ONCE FINISHED */
-        top: -1000px;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin:auto;
-    }
-    
-    .console-underscore {
-        display: inline-block;
-        position: relative;
-        top: -0.14em;
-        left: 10px;
+        top: -600px;
     }
     /* end of animation text */ 
-    
-    .link{
-        font-size: 50px;
-    }
 
+    /* text on index page */
     .text-block{
-        border: black 2px solid;
-        background-color: white;
+        background-color: #fafafa;
         padding: 10px;
         justify-self: none;
     }
+
+    .about.text-block #about, .projects.text-block #projects, .work.text-block #work, .contact.text-block #contact{
+        font-size: 40px; 
+    }
+
+    /* .about.page.intro-text-block p, .about.page.second-text-block p, .about.page.third-text-block p, 
+    .about.page.fourth-text-block p, .about.page.fifth-text-block p{
+    font-size: 30px;
+} */
 
     .about-image {
         grid-column: 3/ span 2;
@@ -408,7 +367,7 @@ header{
     }
     
     .about.text-block {
-        grid-column: 2/ span 2;        
+        grid-column: 2/ span 1;        
         grid-row: 3/ span 1;
     }
     
@@ -428,7 +387,7 @@ header{
     }
     
     .work.text-block{
-        grid-column: 2/ span 2;   
+        grid-column: 2/ span 1;   
         grid-row: 5/ span 1;
     }
     
@@ -441,218 +400,124 @@ header{
         grid-column: 3/ span 2;   
         grid-row: 6/ span 1;
     }
-    
+
     footer {
-        background-color: yellow;
-        color: white;
-        font-size: 12px;
-        grid-column: 1/ -1;   
-        grid-row: 7/ span 1;
-        text-align: left;
-        font-size: 24px;
-        min-height: 200px;
+        grid-column: 1/ -1;
+        grid-row: 7/ span 2;
+        /* position: fixed; */
+    }
+
+    footer p {
+        padding: 0 25px;
     }
     
-    footer .collection-footer img{
-        padding-top: 8px;
-        padding-bottom: 40px;
-        margin-right: 20px;
-        float: left;
-        width: 102px;
-        border-radius:45%;
+    .parallax h2{
+        margin: -100px 0 0 0;
     }
-
-    footer p, h3{
-        text-align: left;
-        
-    }
-
-    footer h3{
-        padding-top: 50px;
-    }
-
-    footer p{
-        padding-top: 0px;
-        font-size: 16px;
-    }
-
-    footer h4{
-        text-align: right;
-        margin-top: -100px;
-        margin-right: 20px;
-    }
-
     
-    /* About Page styling */
+      /* contact page */    
+    legend{
+        grid-row: 2/ span 1;
+        grid-column: 2/ span 1;
+      }
     
-    .container2{
+}
+
+@media screen and (min-width: 1024px){
+    /* background-color: orange; */
+    .container{
         display: grid;
         justify-self: center;
         align-self: center;
-        grid-template-columns: 50px 900px 50px;
-        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-columns: 20px 1fr 1fr 1fr 1fr 20px;
+        grid-template-rows: auto 400px 485px 1fr 150px;
+        grid-column-gap: 0;
         width: 100vw;
-        
     }
+    
+    .nav{
+        grid-column: 1/ -1;
+        grid-row: 1/ span 1;
+        text-align: left;
+        font-size: 24px;
+    }
+
+    #logo{
+        width: 50px;
+        float: left;
+        padding-right: 20px;
+    }
+    
+    /* start of animation text */     
+    .console-container {
+        top: -200px;
+    }
+    /* end of animation text*/ 
+
+    .text-block{
+        background-color: #fafafa;
+        padding: 10px;
+        justify-self: none;
+    }
+
+    .about-image {
+        grid-column: 2/ span 2;
+        grid-row: 3/ span 1;
+    }
+    
+    .about.text-block {
+        grid-column: 2/ span 1;        
+        grid-row: 3/ span 1;
+    }
+    
+    .projects-image{
+        grid-column: 4/ span 2;   
+        grid-row: 3/ span 1;
+    }
+    
+    .projects.text-block{
+        grid-column: 4/ span 1;   
+        grid-row: 3/span 1;
+    }
+    
+    .work-image{
+        grid-column: 2/ span 2;   
+        grid-row: 4/ span 1;
+    }
+    
+    .work.text-block{
+        grid-column: 3/ span 1;   
+        grid-row: 4/ span 1;
+    }
+    
+    .contact-image{
+        grid-column: 4/ span 2;   
+        grid-row: 4/ span 1;
+    }
+    
+    .contact.text-block{
+        grid-column: 5/ span 1;   
+        grid-row: 4/ span 1;
+    }
+    
+
+      /* About Page styling */
 
     h2{
         text-align: center;
     }
-/* Uncomment and delete below code once styling is finished! ERASE BEFORE TURNING IN!
-    .about.page.intro-text-block p, .about.page.second-text-block p, .about.page.third-text-block p, .about.page.fourth-text-block p, .about.page.fifth-text-block p{
-        background-color: white;
-        border: 1px solid black;
-        text-align: center;
-        padding: 0 25px;
-        font-size: 20px;
+
+
+    /* contact page styling */
+    .container2{
+        display: grid;
         justify-self: center;
         align-self: center;
-        margin: 25px;
-    } */
-
-    
-    .about.page.intro-text-block p{
-        background-color: white;
-        border: 1px solid black;
-        text-align: center;
-        padding: 0 25px;
-        font-size: 20px;
-        margin: 25px 0 0 200px;
+        grid-template-columns: 50px 1fr 1fr 1fr 50px;
+        grid-template-rows: auto 300px auto 20px auto 20px auto;
+        width: 100vw;
     }
     
-    .about.page.second-text-block p{
-        display: block;
-        background-color: grey;
-        border: 1px solid black;
-        text-align: center;
-        padding: 10px 25px;
-        font-size: 20px;
-        margin: 50px 200px 50px 0;
-    }
-    
-    .about.page.third-text-block p{
-        background-color: brown;
-        border: 1px solid black;
-        text-align: center;
-        padding: 10px 25px;
-        font-size: 20px;
-        margin: 25px 0 0 200px; /*change if more content is added- DELETE COMMENT BEFORE TURNINING IN */
-    }
-    
-    .about.page.fourth-text-block p{
-        background-color: beige;
-        border: 1px solid black;
-        text-align: center;
-        padding: 10px 25px;
-        font-size: 20px;
-        margin: 50px 200px 50px 0;
-    }
-    
-    .about.page.fifth-text-block p{
-        background-color: blue;
-        border: 1px solid black;
-        text-align: center;
-        padding: 10px 25px;
-        font-size: 20px;
-        margin: 25px 0 0 200px;
-    }
-    
-    /* Projects/ Work Pages */
-     
-    /* Gallery on Project Page */
-     .project-gallery{
-        display: -webkit-box;
-        display: flex;
-        flex-wrap: wrap;
-        -webkit-box-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: center;
-        justify-content: center;
-        min-height: 500px;
-        grid-column: 2/ span 1;
-      }
-    
-      .project-gallery .michigan, .arduino_board, .camp_davis, .yaxunah{
-        box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-        border: 10px #50C7C7 solid;
-        margin: 10px;
-        width: 300px;
-    }
-    
-      #photo2{
-        width: 90%;
-    }
-    
-    /* Gallery on Work Page */
-      .work-gallery{
-        display: -webkit-box;
-        display: flex;
-        flex-wrap: wrap;
-        -webkit-box-align: start;
-        align-items: flex-start;
-        -webkit-box-pack: center;
-        justify-content: center;
-        min-height: 500px;
-        grid-column: 2/ span 1;
-      }
-    
-      .work-gallery .lab, .yard, .housing, .abc_solutions, .design, .facilitation, .habitat, .climate_blue, .humanity_first{
-        box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
-        border: 10px #50C7C7 solid;
-        margin: 10px;
-        width: 300px;
-      }
-    
-      #photo {
-          width: 100%;
-      }
-    
-      /* contact page */
-      legend{
-        grid-row: 2/ span 1;
-        grid-column: 2/ span 1;
-    
-      }
-    
-}
-
-@media screen and (mid-width: 1024px){
-    /* background-color: orange; */
-
-.para {
-    opacity: 0;
-}
-
-.about-overlay {
-    position: relative;
-    width: 100vw;
-}
-.overlay{
-    background-color: orange;
-    transition: .5s ease;
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    opacity: 25%;
-}
-
-
-.about-overlay:hover .overlay{
-    opacity: 1;
-    background-color: orange;
-    grid-row: 3 / span 1;
-    grid-column: 1/-1;
-}
-
-.about-overlay:hover .overlay p{
-    opacity: 1;
-}
-
 @media screen and (prefers-reduced-motion: reduce){
     html{
         scroll-behavior: auto; 
@@ -675,7 +540,12 @@ header{
     }
   }
 
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
 
-/* FOR REDUCED MOTION, NEED TO REMOVE ALL ANIMATION, SCROLLING AND TRANSITIONS
-} */
-
+/* FOR REDUCED MOTION, NEED TO REMOVE ALL ANIMATION, SCROLLING AND TRANSITIONS */
+}

@@ -11,15 +11,16 @@
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
         <div class="nav">
+            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
             <nav>
                 <ul>
-                    <li><a href="index.html">HOME</a></li>
+                    <li><a class="current" href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT</a></li>
                     <li><a href="projects.html">PROJECTS</a></li>
                     <li><a href="work.html">WORK</a></li>
                     <li><a href="contact.html">CONTACT</a></li>
                 </ul>
-            </nav>
+              </nav>
         </div>
         <header id="main">
             <div class='console-container'>
@@ -27,27 +28,28 @@
                 <div class='console-underscore' id='console'>&#95;</div>
             </div>
         </header>
+  
       <div class="about-image">
             <img src="images/mya2.jpg" alt="images of the header representing artist" style= "width:100%"/>
           </div>
         <div class="about text-block">
-            <a name="about" href="about.html" style="font-size: 50px; color: blue;">About Me</a>
-            <p> Learn more about my background and why I decided to do UX Design!</p>
+            <a id="about" href="about.html">About Me</a>
+            <p> Learn more about my background and why I decided to pursue Information Science!</p>
           </div>
         
       <div class="projects-image">
           <img src="images/projects2.jpg" alt="images of the header representing values" style= "width:100%"/>
         </div>
         <div class="projects text-block">
-            <a name="projects" href="projects.html" style="font-size: 50px; color: blue;">My Projects</a>
-          <p> Please take a look at my portfolio!</p>
+            <a id="projects" href="projects.html">My Projects</a>
+          <p> Please take a look at my previous projects at the University of Michigan!</p>
       </div>
        
       <div class="work-image">
           <img src="images/work2.JPG" alt="images of the header representing all of my work (professional development)" style= "width:100%"/>
         </div>
         <div class="work text-block">
-            <a name="work" href="work.html" style="font-size: 50px; color: blue;">My Previous Work</a>
+            <a id="work" href="work.html">Career Summary </a>
           <p> Please take a look at my previous work experience!</p>
       </div>
        
@@ -55,7 +57,7 @@
           <img src="images/contact2.jpg" alt="images of the header representing contact page" style= "width:100%"/>
         </div>
         <div class="contact text-block">
-            <a name="contact" href="contact.html" style="font-size: 50px; color: blue;">Contact Me</a>
+            <a id="contact" href="contact.html">Contact Me</a>
           <p> Follow the link to ask any questions or inquires about my work!</p>
       </div>
         
@@ -64,11 +66,23 @@
               <img src="images/contactme2.png" alt="Photo of Mya"/>
             </div>
             <h3>By Mya Gibson </h3>
-            <p> mbgibson@umich.edu <br/>
-              https://www.linkedin.com/in/myagibson/</p>
+            <p> <a href="mbgibson@umich.edu">Email</a> <br/>
+              <a href="https://www.linkedin.com/in/myagibson">LinkedIn</a></p>
 
-            <h4> Contact me about future projects below </h4>
+            <h4> Learn more about my future projects! </h4>
+            </br>
+            <form action="https://formspree.io/mqkzrdpo" method="POST">
+              <fieldset>
+                  <div id="emailField">
+                      <label>
+                        Email Address:  
+                        <input type="email" placeholder="youremail@email.com" name="_replyto">
+                      </label>
+                  </div>
 
+                  <input type="submit" value="Send">
+
+              </fieldset>
 
       </footer>
     </div>

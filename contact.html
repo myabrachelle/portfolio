@@ -9,16 +9,15 @@
     </head>
     <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="container2">
     <div class="nav">
+        <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="values.html">VALUES</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="work.html">WORK</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a class="current" href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </div>
@@ -26,27 +25,42 @@
         <h1>Contact Me Below!</h1>
         <form action="https://formspree.io/mqkzrdpo" method="POST">
             <fieldset>
-                    <legend>Below, please provide your name and email address so that I can get in contact with you about any of your inquires or concerns!</legend>
+                    <legend>Below, please provide your name and email address so that
+                         I can get in contact with you about any of your inquires or concerns!</legend>
                     <br>
                     <div id="check">
                       <label>
                           Name:
-                        <input type="text" name="name">
+                      </br>
+                        <input type="text" placeholder=" Your Name Here" name="name">
                       </label>
                     </div>
+
+                    </br>
             
                     <div id="emailField">
                       <label>
                         Email Address: 
-                        <input type="email" name="_replyto">
+                    </br>
+                        <input type="email" placeholder=" yourname@email.com" name="_replyto">
                       </label>
+                    </div>
+                    </br>
+
+                    <div id="Message">
+                            <label>
+                              Your Message: 
+                            </br>
+                              <input type="text" placeholder=" Write a message here" name="message">
+                            </label>
                     </div>
             
                     <input type="submit" value="Send">
             </fieldset>        
         </form>
+    </header>
 
-        <footer>
+    <footer>
             <div class="collection-footer">
                 <img src="images/contactme2.png" alt="Photo of Mya"/>
             </div>
@@ -57,7 +71,5 @@
             <h4> Contact me about future projects below </h4>
 
         </footer>
-    </header>
-
-    
-    </div>
+    </body>
+</html>

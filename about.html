@@ -8,7 +8,7 @@
         <title>Mya Gibson's Portfolio</title>
     </head>
     <style>
-        .parallex, .parallex2, .parallex3, .parallex4, .parallex5 {
+        .parallax, .parallax2, .parallax3, .parallax4, .parallax5 {
             /* Create the parallax scrolling effect */
             background-attachment: fixed;
             background-position: center;
@@ -17,49 +17,51 @@
             width: 100%;
         }
 
-        .parallex {
+        .parallax {
             background-image: url("images/mya2.JPG");
             min-height: 250px;
         }
 
-        .parallex2 {
+        .parallax2 {
             background-image: url("images/mountain_mya.jpg");
             min-height: 400px;
         }
 
-        .parallex3 {
+        .parallax3 {
             background-image: url("images/green_mya.JPG");
             min-height: 300px;
         }
 
-        .parallex4 {
+        .parallax4 {
             background-image: url("images/pickney_mya.JPG");
             min-height: 200px;
         }
 
-        .parallex5 {
+        .parallax5 {
             background-image: url("images/pickney_mya.JPG");
             min-height: 200px;
         }
     </style>
     <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="container2">
     <div class="nav">
+            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
+                <li><a class="current" href="about.html">ABOUT</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
                 <li><a href="work.html">WORK</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </div>
+
     <header id="main">
-        <div class="parallex">
-            <h2>About Me</h2>
-            <div class="about page intro-text-block">
+        <div class="parallax">
+            <h1>ABOUT ME</h1>
+        </div>
+        <div class="about page intro-text-block">
                 <a name="about"></a>
                     <p>
                     My name is Mya Gibson and I am a junior at the University of Michigan pursuing a dual 
@@ -67,11 +69,9 @@
                     consulting and UX Design.
                     </p>
             </div>
-        </div>
-        <br/>
 
-        <div class="parallex2">
-            <div class="about page second-text-block">
+        <div class="parallax2"></div>
+        <div class="about page second-text-block">
                 <a name="about"></a>
                     <p>
                     I am really passionate about balancing the needs of our community with the rising use of 
@@ -80,43 +80,47 @@
                     my previous experience in recognizing and addressing community needs through community-based companies, 
                     as well as, having the foundational knowledge in the Earth Science and what is currently occurring in our 
                     world today. 
-                    <br/> 
                     </p>
-            </div>
         </div>
-        <br/>
 
-        <div class="parallex3">
-            <div class="about page third-text-block">
+        <div class="parallax3"></div>
+        <div class="about page third-text-block">
                 <a name="about"></a>
                     <p>
                     I hope to work in an environment where I can bring both focuses to the table and cultivate an 
-                    environment that supports the needs of both concepts.
+                    environment that supports the needs of both concepts. I truly had the opportunity to explore a role 
+                    that balances both technology and people 
+                    after working as a IT consultant for a small, non-profit company called ABC Solutions. 
+                    It was there that I learned beneficial trade skills such as learning more about how to communicate 
+                    with different schools and businesses within the Detroit area.
                     </p>
-            </div>
         </div>
-        <br/>
 
-        <div class="parallex4">
-                <div class="about page fourth-text-block">
-                    <a name="about"></a>
-                        <p>
-                        INCLUDE MORE TO TALK ABOUT HERE
-                        </p>
-                </div>
-            </div>
+        <div class="parallax4"></div>
+        <div class="about page fourth-text-block">
+                <a name="about"></a>
+                    <p>
+                             This job opened my eyes to the possibilities 
+                            and promises that information science will bring to the growing modern world as technology plays an important 
+                            role in increasing traffic and awareness for smaller groups in society. Through the use of technology, 
+                            I was able to help set up the process in increasing productivity on the company’s website to allow easier 
+                            access for newer users while allowing recurring customers to see the success rate from previous clientele. 
+                            Seeing how crucial it was to improve ease of use for all users in order of creating new business was both 
+                            exciting and eye-opening as I saw the direct result of engagement with working in a career-setting that 
+                            depends on both technology and people. 
+                    </p>
+        </div>
 
-        <div class="parallex5">
-                <div class="about page fifth-text-block">
-                    <a name="about"></a>
-                        <p>
-                        If you want to see more of my passions, then please visit my Projects page to learn more about what I 
-                        have done throughout my educational and professional career!
-                        </p>
-                </div>
-            </div>
+        <div class="parallax5"></div>
+        <div class="about page fifth-text-block">
+                <a name="about"></a>
+                    <p>
+                    If you want to see more of my passions, then please visit the <i>Projects</i> page to learn more about what I 
+                    have done throughout my educational and professional career!
+                    </p>
+        </div>
 
-        
+        </header>
         <footer>
                 <div class="collection-footer">
                     <img src="images/contactme2.png" alt="Photo of Mya"/>
@@ -126,9 +130,19 @@
                 https://www.linkedin.com/in/myagibson/</p>
     
                 <h4> Contact me about future projects below </h4>
+                </br>
+                <form action="https://formspree.io/mqkzrdpo" method="POST">
+                <fieldset>
+                    <div id="emailField">
+                        <label>
+                            Email Address:  
+                            <input type="email" placeholder="youremail@email.com" name="_replyto">
+                        </label>
+                    </div>
+
+                    <input type="submit" value="Send">
+
+                </fieldset>
         </footer>
-    </div>
-    
-    </header>
 </body>
 </html>
