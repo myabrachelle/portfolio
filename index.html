@@ -10,8 +10,22 @@
     <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <div class="container">
-        <div class="nav">
-            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
+        <div class="mobile_nav">
+          <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for mobile nav bar">
+          <span id="opennav" onclick="openNav()">&#9776;</span>
+            <nav id = "mobile">
+                <ul>
+                    <li><a class="current" href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav> 
+        </div>
+
+        <div class="desktop_nav">
+            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for desktop nav bar">
             <nav>
                 <ul>
                     <li><a class="current" href="index.html">HOME</a></li>
@@ -22,43 +36,61 @@
                 </ul>
               </nav>
         </div>
+
         <header id="main">
             <div class='console-container'>
                 <span id='text'></span>
                 <div class='console-underscore' id='console'>&#95;</div>
             </div>
         </header>
-  
-      <div class="about-image">
+      <h1>Hi, I'm Mya Gibson</h1>
+
+      <div class = "about">
+        <div class="about-image">
             <img src="images/mya2.JPG" alt="images of the header representing artist" style= "width:100%"/>
-          </div>
-        <div class="about text-block">
-            <a id="about" href="about.html">About Me</a>
+        </div>
+
+        <button class="accordion">About Me</button>
+        <div class="textblock">
+            <h2><a id="about" href="about.html">About Me</a></h2>
             <p> Learn more about my background and why I decided to pursue Information Science!</p>
+        </div>
+      </div>
+
+      <div class = "projects">
+        <div class="projects-image">
+            <img src="images/projects2.jpg" alt="images of the header representing values" style= "width:100%"/>
+        </div>
+        
+        <button class="accordion">My Projects</button>
+        <div class="textblock">
+            <h2><a id="projects" href="projects.html">My Projects</a></h2>
+          <p> Please take a look at my previous projects at the University of Michigan!</p>
+        </div>
+      </div>
+       
+      <div class = "work">
+        <div class="work-image">
+            <img src="images/work2.JPG" alt="images of the header representing all of my work (professional development)" style= "width:100%"/>
+          </div>
+
+          <button class="accordion">Previous Experience</button>
+          <div class="textblock">
+              <h2><a id="work" href="work.html">Experience</a></h2>
+            <p> Here is what I have done so far so please take a look at my previous work experience!</p>
+        </div>
+      </div>
+       
+      <div class = "contact">
+        <div class="contact-image">
+            <img src="images/contact2.jpg" alt="images of the header representing contact page" style= "width:100%"/>
           </div>
         
-      <div class="projects-image">
-          <img src="images/projects2.jpg" alt="images of the header representing values" style= "width:100%"/>
+          <button class="accordion">Contact Me</button>
+          <div class="textblock">
+              <h2><a id="contact" href="contact.html">Contact Me</a></h2>
+            <p> Follow the link to ask any questions or inquires about my work!</p>
         </div>
-        <div class="projects text-block">
-            <a id="projects" href="projects.html">My Projects</a>
-          <p> Please take a look at my previous projects at the University of Michigan!</p>
-      </div>
-       
-      <div class="work-image">
-          <img src="images/work2.JPG" alt="images of the header representing all of my work (professional development)" style= "width:100%"/>
-        </div>
-        <div class="work text-block">
-            <a id="work" href="work.html">Career Summary </a>
-          <p> Please take a look at my previous work experience!</p>
-      </div>
-       
-      <div class="contact-image">
-          <img src="images/contact2.jpg" alt="images of the header representing contact page" style= "width:100%"/>
-        </div>
-        <div class="contact text-block">
-            <a id="contact" href="contact.html">Contact Me</a>
-          <p> Follow the link to ask any questions or inquires about my work!</p>
       </div>
         
       <footer>
@@ -66,11 +98,14 @@
               <img src="images/contactme2.png" alt="Photo of Mya"/>
             </div>
             <h3>By Mya Gibson </h3>
-            <p> <a href="mbgibson@umich.edu">Email</a> <br/>
-              <a href="https://www.linkedin.com/in/myagibson">LinkedIn</a></p>
+            <p> 
+              <a href="mailto:mbgibson@umich.edu" target="_blank"><img src="images/email.jpg" alt="Email" height="25"></a>
+              <br>
+              <a href="https://www.linkedin.com/in/myagibson" target="_blank"><img src="images/linkedin.jpg" alt="Linkedin" height="25"></a>
+            </p>
 
             <h4> Learn more about my future projects! </h4>
-            </br>
+            <br>
             <form action="https://formspree.io/mqkzrdpo" method="POST">
               <fieldset>
                   <div id="emailField">
@@ -83,11 +118,43 @@
                   <input type="submit" value="Send">
 
               </fieldset>
-
+              </form>
       </footer>
     </div>
-    </body>
+
     <script src="index_animation.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    </body>
+    <script>
+        // javascript for navigation bar
+          function openNav(){
+            var nav = document.getElementById("mobile");
+            if (nav.style.display === "block"){
+                nav.style.display = "none";
+            }
+            else{
+                nav.style.display = "block";
+            }
+          };
+
+
+        // javascript for accordion bar leading to different pages
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+      
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var textblock = this.nextElementSibling;
+            if (textblock.style.display === "block") {
+              
+              textblock.style.display = "none";
+            } else {
+              
+              textblock.style.display = "block";
+            }
+          });
+        };
+    </script>
 </html>
 
