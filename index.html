@@ -52,7 +52,7 @@
 
         <button class="accordion">About Me</button>
         <div class="textblock">
-            <h2><a id="about" href="about.html">About Me</a></h2>
+            <h2><a id="about" href="about.html"></a></h2>
             <p> Learn more about my background and why I decided to pursue Information Science!</p>
         </div>
       </div>
@@ -146,12 +146,12 @@
           acc[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var textblock = this.nextElementSibling;
-            if (textblock.style.display === "block") {
+            if (textblock.style.display === "initial") {
               
               textblock.style.display = "none";
             } else {
               
-              textblock.style.display = "block";
+              textblock.style.display = "initial";
             }
           });
         };
