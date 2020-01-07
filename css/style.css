@@ -6,11 +6,12 @@ html {
 }
 
 body {
-    background-color: #ececec;
+    /* background-color: #ececec; */
     font-size: 18px;
     font-family: Khula, 'Times New Roman', sans-serif;
     margin: 0;
     padding: 0; 
+    background-color: #bfd8d5;
 }
 
 h1 {
@@ -19,7 +20,6 @@ h1 {
     margin: 10px;
     line-height: 1;
     text-align: center;
-    /* color: #247E6C; */
     color: black;
     background-image: url("../images/beach.jpg");
     background-size: 100%;
@@ -83,10 +83,11 @@ nav .current{
     position:relative;
     overflow:hidden;
     background-color: white;
+    box-shadow: 1px 2px 5px rgb(169,169,169);
 }
 
 #opennav{
-    color: black;
+    color: #247E6C;
     background: white;
     display: block;
     position: absolute;
@@ -101,7 +102,7 @@ nav .current{
 }
 
 .mobile_nav a{
-    padding: 14px 16px;
+    padding: 5px 14px;
     text-decoration: none;
     font-size: 17px;
     text-align: center;
@@ -166,48 +167,52 @@ a:focus{
 
 .about-image img, .projects-image img, .work-image img, .contact-image img{
     opacity: 95%;
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 250px;
+    max-height: 250px;
 }
 
 
 .about, .work, .contact, .projects {
     display: flex;
+    box-shadow: 1px 2px 5px rgb(169,169,169);
+
 }
 
 .accordion {
     background-color: #eee;
-    color: #444;
+    color: #247E6C;
     cursor: pointer;
     padding: 18px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
-    font-size: 15px;
+    font-size: 20px;
+    font-family: Khula, 'Times New Roman', sans-serif;
     transition: 0.4s;
-  }
+}
   
-  .active, .accordion:hover {
+.active, .accordion:hover {
     background-color: #ccc; 
-  }
-  
-  .textblock {
+}
+
+.textblock {
     padding: 0 18px;
     display: none;
     background-color: white;
     overflow: hidden;
-  }
+}
 
-  .textblock p{
-      font-size: 19px;
-      color: red;
-      background-color: orange;
-  }
-
+.textblock p{
+    font-size: 19px;
+    color: black;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
 
 footer {
-    /* background-color: white; */
+    background-color: #add2c9;
     color: #0c084c;
     font-size: 16px;
     text-align: center;
