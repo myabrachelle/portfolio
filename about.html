@@ -7,142 +7,133 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <title>Mya Gibson's Portfolio</title>
     </head>
+
     <style>
         .parallax, .parallax2, .parallax3, .parallax4, .parallax5 {
-            /* Create the parallax scrolling effect */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            width: 100%;
-        }
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    }
 
-        .parallax {
-            background-image: url("images/mya2.JPG");
-            min-height: 250px;
-        }
+    .parallax {
+        background-image: url("images/mya2.JPG");
+        min-height: 250px;
+    }
 
-        .parallax2 {
-            background-image: url("images/mountain_mya.jpg");
-            min-height: 400px;
-        }
+    .parallax2 {
+        background-image: url("images/mountain_mya.jpg");
+        min-height: 400px;
+    }
 
-        .parallax3 {
-            background-image: url("images/green_mya.JPG");
-            min-height: 300px;
-        }
+    /* .parallax3 {
+        background-image: url("images/green_mya.JPG");
+        min-height: 300px;
+    }
 
-        .parallax4 {
-            background-image: url("images/pickney_mya.jpg");
-            min-height: 200px;
-        }
+    .parallax4 {
+        background-image: url("images/pickney_mya.jpg");
+        min-height: 200px;
+    }
 
-        .parallax5 {
-            background-image: url("images/pickney_mya.jpg");
-            min-height: 200px;
-        }
+    .parallax5 {
+        background-image: url("images/pickney_mya.jpg");
+        min-height: 200px;
+    } */
     </style>
-    <body>
-    <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="nav">
-            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a class="current" href="about.html">ABOUT</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="work.html">WORK</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </div>
 
-    <header id="main">
-        <div class="parallax">
-            <h1>ABOUT ME</h1>
-        </div>
-        <div class="about page intro-text-block">
-                <a name="about"></a>
-                    <p>
-                    My name is Mya Gibson and I am a junior at the University of Michigan pursuing a dual 
-                    degree in Earth & Environmental Science and Information Science, with a focus on environmental 
-                    consulting and UX Design.
-                    </p>
+    <body>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <div class="mobile_nav">
+            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for mobile nav bar">
+            <span id="opennav" onclick="openNav()">&#9776;</span>
+                <nav id = "mobile">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a class="current" href="about.html">ABOUT</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <li><a href="work.html">WORK</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav> 
             </div>
 
+            <div class="desktop_nav">
+                <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for desktop nav bar">
+                <nav>
+                    <ul>
+                        <li><a class="current" href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="projects.html">PROJECTS</a></li>
+                        <li><a href="work.html">WORK</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+    <header id="main">
+        <h1>About Me</h1>
+        <div class="intro-text-block">
+            <p> I am currently a junior at the University of Michigan pursuing a dual 
+            degree in Earth & Environmental Science and Information Science, with a focus on environmental 
+            consulting and UX Design. I am really passionate about balancing community needs with rising and increasingly-changing
+            technological advancements to create solutions that address future problems. This intersection highlights my specialization 
+            as I have previous experience in through community-based companies, coding projects and foundational knowledge developed from 
+            geological studies and projects. </p>
+        </div>
+        <div class="parallax"></div>  
+        
+        <div class="second-text-block">
+            <p> In the future, I hope to work in an environment where I can bring use both skillsets to cultivate and support the needs of 
+                both fundamental concepts. Starting at a small, non-profit company, I had the opportunity to explore a role 
+            that balanced both technology and people where I developed beneficial trade skills such user needs based on the given social 
+            environment. Thereafter, I expanded my role in both the technology and geological industry through participating in various field 
+            studies in the Rocky Mountains and Ann Arbor, Michigan.</p>
+        </div>
+        
         <div class="parallax2"></div>
-        <div class="about page second-text-block">
-                <a name="about"></a>
-                    <p>
-                    I am really passionate about balancing the needs of our community with the rising use of 
-                    technology in our modern world. However, we are living in a world that is rapidly changing so solutions 
-                    need to be made to address future problems. This intersection, is something that I specialize in from 
-                    my previous experience in recognizing and addressing community needs through community-based companies, 
-                    as well as, having the foundational knowledge in the Earth Science and what is currently occurring in our 
-                    world today. 
-                    </p>
+
+        <div class="third-text-block">
+            <p>
+            If you want to see some of my work, then please visit the <a href= "projects.html">Projects</a> page to learn more about 
+            my educational and professional projects and assignments!
+            </p>
         </div>
 
-        <div class="parallax3"></div>
-        <div class="about page third-text-block">
-                <a name="about"></a>
-                    <p>
-                    I hope to work in an environment where I can bring both focuses to the table and cultivate an 
-                    environment that supports the needs of both concepts. I truly had the opportunity to explore a role 
-                    that balances both technology and people 
-                    after working as a IT consultant for a small, non-profit company called ABC Solutions. 
-                    It was there that I learned beneficial trade skills such as learning more about how to communicate 
-                    with different schools and businesses within the Detroit area.
-                    </p>
-        </div>
+    </header>
+    <footer>
+        <p> 
+          <a href="mailto:mbgibson@umich.edu" target="_blank"><img src="images/email.jpg" alt="Email" height="25"></a>
+          <a href="https://www.linkedin.com/in/myagibson" target="_blank"><img src="images/linkedin.jpg" alt="Linkedin" height="25"></a>
+        </p>
 
-        <div class="parallax4"></div>
-        <div class="about page fourth-text-block">
-                <a name="about"></a>
-                    <p>
-                             This job opened my eyes to the possibilities 
-                            and promises that information science will bring to the growing modern world as technology plays an important 
-                            role in increasing traffic and awareness for smaller groups in society. Through the use of technology, 
-                            I was able to help set up the process in increasing productivity on the company’s website to allow easier 
-                            access for newer users while allowing recurring customers to see the success rate from previous clientele. 
-                            Seeing how crucial it was to improve ease of use for all users in order of creating new business was both 
-                            exciting and eye-opening as I saw the direct result of engagement with working in a career-setting that 
-                            depends on both technology and people. 
-                    </p>
-        </div>
+        <h4> Learn more about future projects! </h4>
+        <br>
 
-        <div class="parallax5"></div>
-        <div class="about page fifth-text-block">
-                <a name="about"></a>
-                    <p>
-                    If you want to see more of my passions, then please visit the <i>Projects</i> page to learn more about what I 
-                    have done throughout my educational and professional career!
-                    </p>
-        </div>
-
-        </header>
-        <footer>
-                <div class="collection-footer">
-                    <img src="images/contactme2.png" alt="Photo of Mya"/>
-                </div>
-                <h3>By Mya Gibson </h3>
-                <p> <a href="mbgibson@umich.edu">Email</a> <br/>
-              <a href="https://www.linkedin.com/in/myagibson">LinkedIn</a></p>
-    
-                <h4> Contact me about future projects below </h4>
-                </br>
-                <form action="https://formspree.io/mqkzrdpo" method="POST">
-                <fieldset>
-                    <div id="emailField">
-                        <label>
-                            Email Address:  
-                            <input type="email" placeholder="youremail@email.com" name="_replyto">
-                        </label>
-                    </div>
-
-                    <input type="submit" value="Send">
-
-                </fieldset>
-        </footer>
+        <form action="https://formspree.io/mqkzrdpo" method="POST">
+          <fieldset>
+              <div id="emailField">
+                  <label> 
+                    <input type="email" placeholder="YOUREMAIL@email.com" name="_replyto">
+                  </label>
+                  <input type="submit" value="Send &#8594;">
+              </div>
+          </fieldset>
+          </form>
+  </footer>
 </body>
+<script>
+    // javascript for navigation bar
+    function openNav(){
+            var nav = document.getElementById("mobile");
+            if (nav.style.display === "block"){
+                nav.style.display = "none";
+            }
+            else{
+                nav.style.display = "block";
+            }
+          };
+</script>
 </html>
