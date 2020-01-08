@@ -24,6 +24,9 @@ h1 {
     background-image: url("../images/beach.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
+    /* background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
     padding: 40px;
 
 }
@@ -61,7 +64,7 @@ nav li{
 
 nav a{
     /* color of the list links in nav bar */
-    color: rgb(17, 85, 82);
+    color: #0c084c;
 }
 
 nav a:hover{
@@ -242,32 +245,30 @@ footer input {
 
 
 /* About Page styling */
-header{
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* grid-column: 2/ span 1;
-    grid-row: 2/ -2; */
-}
 
 .parallax h1 {
-    position: absolute;
+    /* position: absolute;
     left: 0;
     top: 50%;
     width: 100%;
     letter-spacing: 10px;
     text-align: center;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 0; */
 }
 
-.about.page.intro-textblock p, .about.page.second-textblock p, .about.page.third-textblock p, 
-.about.page.fourth-textblock p, .about.page.fifth-textblock p{
+.intro-text-block p, .second-text-block p, .third-text-block p{
     text-align: center;
-    padding: 0 25px;
     font-size: 16px;
     margin: 25px;
-    /* color: #096386; */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width: 72%;
+    border-radius: 5px;
+    background-color: #e1e9f3;
+}
+
+.third-text-block a{
+    padding: 0;
 }
 
 
@@ -391,8 +392,8 @@ header{
         font-size: 40px; 
     }
 
-    /* .about.page.intro-textblock p, .about.page.second-textblock p, .about.page.third-textblock p, 
-    .about.page.fourth-textblock p, .about.page.fifth-textblock p{
+    /* .intro-textblock p, .second-textblock p, .third-textblock p, 
+    .fourth-textblock p, .fifth-textblock p{
     font-size: 30px;
 } */
 
