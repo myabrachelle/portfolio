@@ -9,8 +9,22 @@
     </head>
     <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="nav">
-        <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
+    <div class="mobile_nav">
+      <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for mobile nav bar">
+      <span id="opennav" onclick="openNav()">&#9776;</span>
+          <nav id = "mobile">
+              <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>
+                  <li><a href="projects.html">PROJECTS</a></li>
+                  <li><a href="work.html">WORK</a></li>
+                  <li><a class="current" href="contact.html">CONTACT</a></li>
+              </ul>
+          </nav> 
+      </div>
+
+    <div class="desktop_nav">
+        <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for desktop nav bar">
         <nav>
             <ul>
                 <li><a href="index.html">HOME</a></li>
@@ -21,55 +35,100 @@
             </ul>
         </nav>
     </div>
+
+
     <header id="main">
-        <h1>Contact Me Below!</h1>
+        <h1>Contact Page</h1>
+        <h2 class="triangledowntxt">If you are interested in learning more about future projects and studies, then please 
+          provide your name and email address </h2>
+        </div>
+
         <form action="https://formspree.io/mqkzrdpo" method="POST">
             <fieldset>
-                    <legend>Below, please provide your name and email address so that
-                         I can get in contact with you about any of your inquires or concerns!</legend>
-                    <br>
-                    <div id="check">
-                      <label>
-                          Name:
-                      </br>
-                        <input type="text" placeholder=" Your Name Here" name="name">
+                    <div id="firstName">
+                      <label name="firstname">
+                          First Name:
+                      
+                        <input type="text" placeholder=" First Name" name="firstname" required>
                       </label>
                     </div>
+                    </br>
 
+                    <div id="lastName">
+                      <label name="lastname">
+                          Last Name:
+                      </br>
+                        <input type="text" placeholder=" Last Name" name="lastname" required>
+                      </label>
+                    </div>
                     </br>
             
                     <div id="emailField">
-                      <label>
+                      <label name="email">
                         Email Address: 
                     </br>
-                        <input type="email" placeholder=" yourname@email.com" name="_replyto">
+                        <input type="email" placeholder=" YOUREMAIL@email.com" name="email" required>
                       </label>
                     </div>
                     </br>
 
                     <div id="Message">
-                            <label>
+                            <label name ="message">
                               Your Message: 
                             </br>
-                              <input type="text" placeholder=" Write a message here" name="message">
+                              <input type="text" placeholder=" What questions do you have?" name="message" style="height:200px">
                             </label>
                     </div>
+                    <br>
+
+                    <div id="funQ">
+                      <h4>Where are you from? (ie. City/State/Country)</h4>
+                      <br>
+                      <label>
+                          Region:
+                      </br>
+                        <input type="text" name="region">
+                      </label>
+                    </div>
+                    </br>
             
-                    <input type="submit" value="Send">
+                    <input type="submit" name="contactpg" value="Send">
             </fieldset>        
         </form>
     </header>
 
-    <footer>
-            <div class="collection-footer">
-                <img src="images/contactme2.png" alt="Photo of Mya"/>
-            </div>
-            <h2>By Mya Gibson </h2>
-            <p> <a href="mbgibson@umich.edu">Email</a> <br/>
-              <a href="https://www.linkedin.com/in/myagibson">LinkedIn</a></p>
-
-            <h3> Contact me about future projects below </h3>
-
-        </footer>
+        <footer>
+            <p> 
+              <a href="mailto:mbgibson@umich.edu" target="_blank"><img src="images/email.jpg" alt="Email" height="25"></a>
+              <a href="https://www.linkedin.com/in/myagibson" target="_blank"><img src="images/linkedin.jpg" alt="Linkedin" height="25"></a>
+            </p>
+    
+            <h4> Learn more about future projects! </h4>
+            <br>
+    
+            <form action="https://formspree.io/mqkzrdpo" method="POST">
+              <fieldset>
+                  <div id="emailField">
+                      <label> 
+                        <input type="email" placeholder="YOUREMAIL@email.com" name="_replyto">
+                      </label>
+                      <input type="submit" value="Send &#8594;">
+                  </div>
+              </fieldset>
+              </form>
+      </footer>
+      
     </body>
+    <script>
+      // javascript for navigation bar
+      function openNav(){
+              var nav = document.getElementById("mobile");
+              if (nav.style.display === "block"){
+                  nav.style.display = "none";
+              }
+              else{
+                  nav.style.display = "block";
+              }
+            };
+  </script>
 </html>
