@@ -9,18 +9,32 @@
     </head>
     <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-    <div class="nav">
-        <img src="images/logo.JPG" id="logo" alt="image of portfolio logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a class="current" href="projects.html">PROJECTS</a></li>
-                <li><a href="work.html">WORK</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-            </ul>
-        </nav>
-    </div>
+    <div class="mobile_nav">
+        <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for mobile nav bar">
+        <span id="opennav" onclick="openNav()">&#9776;</span>
+            <nav id = "mobile">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a class="current" href="projects.html">PROJECTS</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav> 
+        </div>
+
+        <div class="desktop_nav">
+            <img src="images/logo.JPG" id="logo" alt="image of portfolio logo for desktop nav bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a class="current" href="projects.html">PROJECTS</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
         <header id="main">
                 <h1>My Previous Projects</h1>
         
@@ -51,28 +65,38 @@
             </header>
                 
             <footer>
-                    <div class="collection-footer">
-                        <img src="images/contactme2.png" alt="Photo of Mya"/>
-                    </div>
-                        <h3>By Mya Gibson </h3>
-                        <p> <a href="mbgibson@umich.edu">Email</a> <br/>
-              <a href="https://www.linkedin.com/in/myagibson">LinkedIn</a></p>
-            
-                        <h4> Contact me about future projects below </h4>
-                    </br>
-                    <form action="https://formspree.io/mqkzrdpo" method="POST">
-                      <fieldset>
-                          <div id="emailField">
-                              <label>
-                                Email Address:  
-                                <input type="email" placeholder="youremail@email.com" name="_replyto">
-                              </label>
-                          </div>
+                <p> 
+                  <a href="mailto:mbgibson@umich.edu" target="_blank"><img src="images/email.jpg" alt="Email" height="25"></a>
+                  <a href="https://www.linkedin.com/in/myagibson" target="_blank"><img src="images/linkedin.jpg" alt="Linkedin" height="25"></a>
+                </p>
         
-                          <input type="submit" value="Send">
+                <h4> Learn more about future projects! </h4>
+                <br>
         
-                      </fieldset>
-            </footer>
+                <form action="https://formspree.io/mqkzrdpo" method="POST">
+                  <fieldset>
+                      <div id="emailField">
+                          <label> 
+                            <input type="email" placeholder="YOUREMAIL@email.com" name="_replyto">
+                          </label>
+                          <input type="submit" value="Send &#8594;">
+                      </div>
+                  </fieldset>
+                  </form>
+          </footer>
+          
         </body>
+        <script>
+            // javascript for navigation bar
+            function openNav(){
+                    var nav = document.getElementById("mobile");
+                    if (nav.style.display === "block"){
+                        nav.style.display = "none";
+                    }
+                    else{
+                        nav.style.display = "block";
+                    }
+                  };
+        </script>
         </html>
     
