@@ -177,7 +177,7 @@ a:focus{
     width: 72%;
     border-radius: 5px;
     flex: 0 0 auto;
-    background-color: white;
+    background-color: #e1e9f3;
 }
 
 .cards > div{
@@ -238,10 +238,26 @@ footer input {
     background-color: #c7d8ea;
     font-family: Khula, 'Times New Roman', sans-serif;
     border-width: 0;
+    border-radius: 5px;
+    text-align: center;
     margin: 0;
     color: rgb(12, 8, 76);
 }
 
+input[type=submit] {
+    background-color: #a7c3e0;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  input[type=submit]:hover{
+      background-color: #5560aa;
+  }
 
 
 /* About Page styling */
@@ -293,10 +309,12 @@ footer input {
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     margin: 20px;
     width: 300px;
+    background-color: #e1e9f3;
 }
 
 .project-gallery .michigan h3, .arduino_board h3, .camp_davis h3, .yaxunah h3{
     margin: 15px;
+    color: rgb(12, 8, 76);
 }
 
   #photo2{
@@ -305,6 +323,12 @@ footer input {
 
 
 /* Gallery on Work Page */
+
+  .resume{
+      font-size: 24px;
+      margin: 12px 0;
+      text-align: center;
+  }
 
   .work-gallery{
     display: -webkit-box;
@@ -321,31 +345,106 @@ footer input {
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     margin: 10px;
     width: 300px;
+    background-color: #e1e9f3;
   }
 
   .work-gallery .lab h3, .yard h3, .housing h3, .abc_solutions h3, .design h3, 
   .facilitation h3, .habitat h3, .climate_blue h3, .humanity_first h3{
       margin: 15px;
+      color: rgb(12, 8, 76);
   }
 
   #photo {
       width: 100%;
   }
 
+  .button{
+      background-color: rgb(12, 8, 76);
+      border: none;
+      color: white;
+      text-align: center;
+      display: table;
+      font-size: 22px;
+      box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+      margin: auto;
+  }
 
+  .button_class{
+      display: inline-block;
+  }
 
 
   /* contact page */
+  .triangledowntxt{
+      color: white;
+      z-index: 1;
+      font-size: 20px;
+      text-align: center;
+      margin: 0 10px 50px;
+      position: relative;
+      height: 100px;
+      padding: 20px;
+      background-color: rgb(12, 8, 76);
+  }
+
+  .triangledowntxt:after{
+    z-index: -1;
+    position: absolute;
+    color: rgb(12, 8, 76);
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 30px solid rgb(12, 8, 76);
+    content: "";
+    top: 140px;
+    left: 0px;
+    width: 0;
+    height: 0;
+  }
+
   legend{
     margin: 15px 30px;
   }
 
-  label{
-      margin: 30px;
+  label[name="firstname"], label[name="lastname"], label[name="email"], label[name="message"]{
+      margin: 10px;
   }
 
-  input {
-      margin: 0 30px;
+  #funQ {
+      margin: 10px;
+  }
+
+  #funQ h3 {
+      text-align: center;
+  }
+
+  input[name="firstname"], input[name="lastname"], input[name="email"], input[name="message"], input[name="region"] {
+      font-size: 10px;
+      padding: 10px;
+      font-family: Khula, 'Times New Roman', sans-serif;
+      margin: 10px 10px 16px;
+      width: 85%;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      border-radius: 5px;
+      border: 1px solid #cccc;
+      box-sizing: border-box;
+      resize: vertical;
+  }
+
+  input[name="contactpg"] {
+    background-color: rgb(12, 8, 76);
+    border: none;
+    color: white;
+    text-align: center;
+    display: table;
+    font-size: 17px;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    margin: auto;
+    padding: 12px;
+    border-radius: 5px;
+  }
+
+  input[name="contactpg"]:hover{
+      background-color: #5560aa;
   }
 
 @media screen and (min-width: 765px){
