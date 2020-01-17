@@ -151,7 +151,7 @@ a:focus{
 }
 
 /* puts logo at top of page */
-#logo{
+#mobile_logo{
     float: initial;
     width: 50px;
 }
@@ -541,7 +541,7 @@ input[type=submit] {
         background-color: white;
     }
 
-    #logo{
+    #desktop_logo{
         width: 60px;
         float: left;
         padding-right: 20px;
