@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>UX Public Field Research</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+
+</head>
+<body>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <div class="container">
+        <div class="mobile_nav">
+          <img src="images/logo.JPG" id="mobile_logo" alt="image of portfolio logo for mobile nav bar">
+          <span id="opennav" onclick="openNav()">&#9776;</span>
+            <nav id = "mobile">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a class="current" href="projects.html">PROJECTS</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav> 
+        </div>
+
+        <div class="desktop_nav">
+            <img src="images/logo.JPG" id="desktop_logo" alt="image of portfolio logo for desktop nav bar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a class="current" href="projects.html">PROJECTS</a></li>
+                    <li><a href="work.html">WORK</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+              </nav>
+        </div>
+
+        <header id="main">
+            <h1>SI 350: UX Public Research</h1>
+            <h2><a href="projects.html">&#8592;</a></h2>
+            <div class="ux-pub">
+                <h3>During the summer of 2019, I participated in a summer class at the University of Michigan to conduct UX Research based on the needs
+                    assessed by the city of Ann Arbor </h3>
+                <p>After completing the course, a group of 3 other students and myself created a final report, presentation and a variety of other 
+                    usability testing methods to gather research and gain insight into residents' perspectives. These methods include:
+                    <ul>
+                        <li>Personas</li>
+                        <li>User Interviews</li>
+                        <li>Matrices</li>
+                        <li>Photo Collaging</li>
+                    </ul>
+                </p>
+                <div class="presentation">
+                    <iframe class="prez_pdf" src="portfolio_resources/ux_public_research/final_presentation.PDF" width="100%" height="800px"></iframe>
+                </div>
+                <a href="portfolio_resources/ux_public_research/final_presentation.PDF" id="final_pres_button" class="button" target="_blank">Presentation</a>
+
+                <h2 class="final_report">Click to download the final report composing all of the research </h2>
+                <a href="portfolio_resources/ux_public_research/final_report.PDF" class="button" target="_blank">Final Report</a>
+            </div>
+        </header>
+        
+        <footer>
+            <p> 
+              <a href="mailto:mbgibson@umich.edu" target="_blank"><img src="images/email.png" alt="Email" height="25"></a>
+              <a href="https://www.linkedin.com/in/myagibson" target="_blank"><img src="images/linkedin.png" alt="Linkedin" height="25"></a>
+            </p>
+    
+            <h4> Learn more about future projects! </h4>
+            <br>
+    
+            <form action="https://formspree.io/mqkzrdpo" method="POST">
+              <fieldset>
+                  <div id="emailField">
+                      <label> 
+                        <input type="email" placeholder="YOUREMAIL@email.com" name="_replyto">
+                      </label>
+                      <input type="submit" value="Send &#8594;">
+                  </div>
+              </fieldset>
+              </form>
+      </footer>
+      </header>
+    </body>
+    <script>
+        // javascript for navigation bar
+        function openNav(){
+                var nav = document.getElementById("mobile");
+                if (nav.style.display === "block"){
+                    nav.style.display = "none";
+                }
+                else{
+                    nav.style.display = "block";
+                }
+              };
+    </script>
+</html>

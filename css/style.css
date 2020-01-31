@@ -321,6 +321,13 @@ input[type=submit] {
     width: 90%;
 }
 
+/* UX Public Research Page */
+
+.prez_pdf {
+    display: none;
+}
+
+
 
 /* Gallery on Work Page */
 
@@ -354,7 +361,7 @@ input[type=submit] {
       color: rgb(12, 8, 76);
   }
 
-  #michigan-photo, #camp-davis-photo, #yaxunah-photo, #proj206-photo, #portfolio-photo, #outsideportfolio-photo{
+  #michigan-photo, #camp-davis-photo, #yaxunah-photo, #proj206-photo, #portfolio-photo, #outsideportfolio-photo, #photo{
       width: 100%;
   }
 
@@ -411,10 +418,6 @@ input[type=submit] {
   }
 
   label[name="firstname"], label[name="lastname"], label[name="email"], label[name="message"], label[name="funQ"]{
-      margin: 10px;
-  }
-
-  #funQ {
       margin: 10px;
   }
 
@@ -502,6 +505,18 @@ input[type=submit] {
         padding-bottom: 20px;
     }
     
+    /* UX Public Research Page */
+    .prez_pdf {
+        display: block;
+        height: 500px;
+        width: 80%;
+    }
+
+    #final_pres_button {
+        display:none;
+    }
+
+
       /* contact page */    
     input[name="firstname"], input[name="lastname"], input[name="email"], input[name="message"], input[name="region"]{
         margin-left: 40px;
@@ -623,6 +638,13 @@ input[type=submit] {
     /* about page */
     .intro-text-block p, .second-text-block p, .third-text-block p{
         font-size: 18px;
+    }
+
+
+    /* UX Public Research Page */
+    .prez_pdf {
+        height: 600px;
+        width: 70%;
     }
 
     
