@@ -39,6 +39,11 @@ h2{
     text-align: left;
 }
 
+h4{
+    font-size: 14px;
+    margin: 15px;
+}
+
 
 p{
     text-align: center;
@@ -154,6 +159,10 @@ a:focus{
 #mobile_logo{
     float: initial;
     width: 50px;
+}
+
+#desktop_logo{
+    display: none;
 }
 
 /* eliminates animation for mobile and tablet */
@@ -321,13 +330,6 @@ input[type=submit] {
     width: 90%;
 }
 
-/* UX Public Research Page */
-
-.prez_pdf {
-    display: none;
-}
-
-
 
 /* Gallery on Work Page */
 
@@ -455,6 +457,46 @@ input[type=submit] {
       background-color: #5560aa;
   }
 
+  /* UX Public Research Page */
+
+#back_page{
+    font-size: 15px;
+    margin: 5px;
+    text-align: left;
+    color: purple;
+    background-image: none;
+    padding: 0px;
+    padding-top: 20px;
+}
+
+
+.prez_pdf {
+    display: none;
+}
+
+#ux_public_header{
+    width:100%;
+    max-height: 250px;
+    padding-top: 10px;
+}
+
+.header_350{
+    background-color: white;
+    padding: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 3px;
+    margin: 15px;
+}
+
+.header_350 h3{
+    font-size: 20px;
+    margin: 10px;
+}
+
+.project_goals{
+    margin: 15px;
+}
+
 @media screen and (min-width: 765px){
     .container{
         display: grid;
@@ -529,6 +571,20 @@ input[type=submit] {
     h4{
         margin: 10px;
     } 
+
+    .header_350{
+        grid-column: 2 / span 1;
+        grid-row: 3 / span 3;
+    }
+    
+    .header_350 h3{
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    .project_goals{
+        margin: 15px;
+    }
 }
 
 
@@ -552,18 +608,22 @@ input[type=submit] {
         grid-column: 1/ -1;
         grid-row: 1/ span 1;
         text-align: center;
-        font-size: 36px;
+        font-size: 24px;
         background-color: white;
-        padding: 20px;
-        padding-top: 40px;
+        padding: 10px;
+        padding-top: 10px;
     }
 
     #desktop_logo{
-        width: 60px;
+        display: block;
+        width: 57px;
         float: left;
         padding-right: 20px;
-        margin-left: 10px;
+        padding-left: 20px;
+
+        /* margin-left: 40px; */
         grid-row: 1/ 3;
+        background-color: white;
         /* padding-bottom: 30px; */
     }
     
@@ -642,12 +702,11 @@ input[type=submit] {
 
 
     /* UX Public Research Page */
-    .prez_pdf {
-        height: 600px;
-        width: 70%;
-    }
 
-    
+    .header_350{
+        grid-column: 2 / span 2;
+        grid-row: 3 / span 1;
+    }
       /* contact page */ 
       
     .triangledowntxt{
@@ -685,6 +744,7 @@ input[type=submit] {
         margin: 10px;
     } 
 
+
     
 @media screen and (prefers-reduced-motion: reduce){
     html{
@@ -709,11 +769,11 @@ input[type=submit] {
   }
 
   /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-/* @media only screen and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 1024px) {
     .parallax {
       background-attachment: scroll;
     }
-  } */
+  }
 
 /* FOR REDUCED MOTION, NEED TO REMOVE ALL ANIMATION, SCROLLING AND TRANSITIONS */
 }
