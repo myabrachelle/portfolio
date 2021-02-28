@@ -314,20 +314,46 @@ input[type=submit] {
     min-height: 500px;
   }
 
-  .project-gallery .michigan, .arduino_board, .camp_davis, .yaxunah, .project206, .portfolio, .outside-portfolio{
+  .project-gallery .michigan, .arduino_board, .camp_davis, .yaxunah, .project206, .portfolio, .outside-portfolio, .fashion, .lansing, .carr_center, .detroit_food_academy{
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
     margin: 20px;
     width: 300px;
     background-color: #e1e9f3;
 }
 
-.project-gallery .michigan h3, .arduino_board h3, .camp_davis h3, .yaxunah h3, .project206 h3, .portfolio h3, .outside-portfolio h3{
+.project-gallery .michigan h3, .arduino_board h3, .camp_davis h3, .yaxunah h3, .project206 h3, .portfolio h3, .outside-portfolio h3, .fashion h3, .lansing h3, .carr_center h3, .detroit_food_academy h3{
     margin: 15px;
     color: rgb(12, 8, 76);
 }
 
-  #photo2{
-    width: 95%;
+#construction{
+    color: purple;
+    margin: 20px;
+    text-align:center;
+}
+
+#h3_construction{
+    margin: 20px;
+    text-align:center;
+    color:#0c084c; 
+}
+
+#work{
+    background-color: rgb(12, 8, 76);
+      border: none;
+      color: #d9e4f5;
+      text-align: center;
+      display: table;
+      font-size: 18px;
+      box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+      margin: 20px auto;
+    font-family: Khula, 'Times New Roman', sans-serif;
+    padding: 10px;
+
+}
+
+#a_work{
+    padding:0px;
 }
 
 
@@ -363,7 +389,7 @@ input[type=submit] {
       color: rgb(12, 8, 76);
   }
 
-  #michigan-photo, #camp-davis-photo, #yaxunah-photo, #proj206-photo, #portfolio-photo, #outsideportfolio-photo, #photo{
+  #michigan-photo, #photo2, #camp-davis-photo, #yaxunah-photo, #proj206-photo, #portfolio-photo, #outsideportfolio-photo, #photo, #fashion_page, #cc_logo, #lansing_logo, #dfa_logo{
       width: 100%;
   }
 
@@ -467,11 +493,6 @@ input[type=submit] {
     background-image: none;
     padding: 0px;
     padding-top: 20px;
-}
-
-
-.prez_pdf {
-    display: none;
 }
 
 #ux_public_header{
@@ -608,8 +629,8 @@ input[type=submit] {
         display:flow-root;
         grid-column: 1/ -1;
         grid-row: 1/ span 1;
-        text-align: center;
-        font-size: 24px;
+        text-align: right;
+        font-size: 20px;
         background-color: white;
         padding: 10px;
         padding-top: 10px;
